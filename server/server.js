@@ -26,6 +26,10 @@ app.get("/", (req, res) => {
 });
 
 const startServer = async () => {
+  console.log(
+  "MONGODB_URI configured:",
+  Boolean(process.env.MONGODB_URI)
+);
   await connectDB();
 
   const PORT = process.env.PORT || 5000;
